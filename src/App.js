@@ -1,26 +1,38 @@
 import React from 'react';
-import logo from './logo.svg';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from 'react-responsive-carousel';
+
+import favicon from './images/favicon.jpg';
+import game5 from './images/game5.jpg';
+import nagato from './images/nagato_chave.jpg';
+
 import './App.css';
 
-function App() {
+function App () {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="slide">
+      <Carousel infiniteLoop useKeyboardArrows autoPlay showThumbs={false}>
+        <div>
+          <img src={favicon} />
+          <p className="legend">
+            Legend 
+          </p>
+        </div>
+        <div>
+          <img src={game5} />
+          <p className="legend">
+            Legend 
+          </p>
+        </div>
+        <div>
+          <img src={nagato} />
+          <p className="legend">
+            Legend 
+          </p>
+        </div>
+      </Carousel>
     </div>
   );
-}
+};
 
 export default App;
